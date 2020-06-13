@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>./</loc>
-<lastmod>2020-05-22T16:01:35-00:00</lastmod>
+<lastmod>2020-06-13T14:39:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./archives.html</loc>
-<lastmod>2020-05-22T16:01:35-00:00</lastmod>
+<lastmod>2020-06-13T14:39:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./tags.html</loc>
-<lastmod>2020-05-22T16:01:35-00:00</lastmod>
+<lastmod>2020-06-13T14:39:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./categories.html</loc>
-<lastmod>2020-05-22T16:01:35-00:00</lastmod>
+<lastmod>2020-06-13T14:39:37-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -54,6 +54,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>./2020-May-22-3-class-Windows.html</loc>
+<lastmod>2020-05-22T14:30:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>./wcmj2020.html</loc>
 <lastmod>2020-05-22T14:30:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>

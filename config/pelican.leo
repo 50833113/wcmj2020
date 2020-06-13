@@ -77,6 +77,7 @@
 </v>
 <v t="leo.20200613135958.1"><vh>@clean wcmj2020W1-14.md</vh>
 <v t="leo.20200613140208.1"><vh>W1-14</vh></v>
+<v t="leo.20200613143015.1"><vh>5639875907648188047</vh></v>
 </v>
 </v>
 </v>
@@ -853,6 +854,7 @@ python3 wsgi.py
 pip3 install  flask flask_cors lxml bs4 markdown pelican leo
 Mac OS X 操作系統
 與 Ubuntu 20.04 類似.</t>
+<t tx="leo.20200613143015.1"></t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
