@@ -396,23 +396,31 @@ except(client.AccessTokenRefreshError):
 
 [計算機程式的重要性]: https://www.quora.com/Why-is-programming-so-important-in-the-modern-world
 </t>
-<t tx="leo.20200529161714.1">step 1
+<t tx="leo.20200529161714.1">step 1:
+
 登入 gm 帳號後, 下載 https://drive.google.com/open?id=1SvMKQFViJ0mskt20UhSqkjzckB3noSJH 至 downloads 目錄, 然後以 7zip 解開到 C:\wcmj2020 目錄下
-step 2
+step 2:
+
 解開後的目錄為 c:\wcmj2020\wcm2020, 其中有 start.bat 與 stop.bat, 開啟可攜系統時, 以滑鼠點擊 start.bat, 關閉可攜系統時, 以滑鼠點擊 stop.bat
-step 3
+step 3:
+
 登入以個人學號所建立的 github 帳號, 然後建立 wcmj2020 倉儲.
-step 4
+step 4:
+
 將遠端的 wcmj2020 以 git clone 取下.
 git clone https://github.com/學號/wcmj2020.git
-step 5
+step 5:
+
 git submodule add https://github.com/mdecourse/cmsimde cmsimde
-step 6
+step 6:
+
 進入 cmsimde 以 python wsgi.py 啟動動態系統
 以瀏覽器 https://localhost:9443 可以利用 admin 為帳號登入管理
-step 7
+
+step 7:
 動態系統維護後, 利用 generate_pages 轉為靜態.
-step8
+
+step8:
 git config --global user.email your_gmail
 git config --global user.name your_student_no
 git config --global http.proxy http://[2001:288:6004:17::53]:3128
@@ -421,17 +429,20 @@ git commit -m "commit message"
 git push</t>
 <t tx="leo.20200529161717.1">由於在電腦教室時採用純 IPv6 協定上網, 因此為了能夠在近端將倉儲改版資料推送到目前只接受 IPv4 協定連線的 github, 以下除了將原本以 https 對 github 連線, 改為以 ssh 協定連線外, 在 Windows 環境下必須利用 putty 與 plink, 設定 putty 格式的 .ppk 以及能夠同時支援 IPv4 與 IPv6 的代理主機.
 設定步驟如下:
-1. 下載 Putty 工具組
-從 https://www.chiark.greenend.org.uk/~sgtatham/putty/ 下載一般版, 或從 http://jakub.kotrla.net/putty/ 下載特殊的可攜版本.
-2. 利用 y:\portablegit\bin\sh.exe 進入 shell 命令環境後,
-ssh-keygen -t rsa -b 4096 -C "使用者學號"
+
+1. 下載 Putty 工具組:從 https://www.chiark.greenend.org.uk/~sgtatham/putty/ 下載一般版, 或從 http://jakub.kotrla.net/putty/ 下載特殊的可攜版本.
+
+2. 利用 y:\portablegit\bin\sh.exe 進入 shell 命令環境後,ssh-keygen -t rsa -b 4096 -C "使用者學號"
 在 /y/home/.ssh 目錄下建立 id_rsa 與 id_rsa.pub 等 private key 與 public key
 之後以 SciTE 開啟 id_rsa.pub 後, 將此 public key 的內容, 以新增添加到 Github.com 帳號下 personal settings -&gt; SSH and GPG keys 頁面下.
+
 3. 接下來要利用 puttygen.exe 將 id_rsa 轉為 Putty 可以解讀的 .ppk 格式, 並修改隨身系統的啟動批次檔案, 指定利用 putty 目錄下的 plink 執行 git 指令的網路代理設定.
+
 4. 利用 puttygen.exe 載入第二步驟所建立的 private key, 也就是 id_rsa.
-開啟 puttygen 之後, 以右下方的 load 載入 id_rsa, 成功載入後, 利用 save private key 按鈕, 將已經轉為 putty 格式的 .ppk 存檔. 此一 .ppk 檔案必須在設定 putty 中 github.com session 時, 在 Connection-&gt;SSH-&gt;Auth 項目下, 將轉檔後的 .ppk 指向 private key file for authentication 欄位. 
-並在 Connection-&gt;Proxy 項目下, 指定 Proxy type: HTTP, 並將 IPv6 代理主機設為 ::53 或 ::42 埠號設為 3128.
+開啟 puttygen 之後, 以右下方的 load 載入 id_rsa, 成功載入後, 利用 save private key 按鈕, 將已經轉為 putty 格式的 .ppk 存檔. 此一 .ppk 檔案必須在設定 putty 中 github.com session 時, 在 Connection-&gt;SSH-&gt;Auth 項目下, 將轉檔後的 .ppk 指向 private key file for authentication 欄位. 並在 Connection-&gt;Proxy 項目下, 指定 Proxy type: HTTP, 並將 IPv6 代理主機設為 ::53 或 ::42 埠號設為 3128.
+
 5. 之後確定 home 下的 .ssh 目錄中的 config 設定檔案為:
+
 6. 最後再將 wcmj2020 倉儲中 .git 目錄下的 config 檔案中的連線協定, 由 https 改為採 ssh 連線: 範例如下:
     repositoryformatversion = 0
     filemode = false
@@ -455,6 +466,7 @@ ssh-keygen -t rsa -b 4096 -C "使用者學號"
 <t tx="leo.20200529161720.1">Leo Editor 基本用法
 ----
 在隨身程式系統的命令列視窗中，以leo啟動[Leo Editor]，然後開啟[wcmj2020]倉儲config目錄中的pelican.leo檔案。
+
 [Leo Editor]是一個大綱管理系統，淡黃色區域是大綱節點區，淡紅色區是與各大鋼對應的內文區，而淡藍色則是Log輸出區。
 在[Leo Editor]中新增節點的指令:ctrl+i
 在[Leo Editor]中向右移動節點的方法:ctrl+r
